@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <h1>Tarea No. 1 del Módulo 2</h1>
@@ -18,4 +18,36 @@
       <app-success-alert></app-success-alert>
     </div>
   </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Tarea No. 2 del Módulo 2</h1>
+      <ol>
+        <li>
+          Agregue un campo de entrada que actualice una propiedad ('username') a
+          través del enlace de datos bidireccional
+        </li>
+        <li>
+          Muestra la propiedad del nombre de usuario a través de la
+          interpolación de cadenas (en un párrafo debajo de la entrada)
+        </li>
+        <li>
+          Agregue un botón en el que solo se puede hacer clic si el nombre de
+          usuario NO es una cadena vacía
+        </li>
+        <li>
+          Al hacer clic en el botón, el nombre de usuario debe restablecerse a
+          una cadena vacía
+        </li>
+      </ol>
+      <hr />
+      <label>Username</label>
+      <input type="text" class="form-control" [(ngModel)]="username"/>
+      <p>{{username}}</p>
+      <button type="button" class="btn btn-primary" [disabled]="username === ''" (click)="resetUsername($event)">Reset Username</button>
+    </div>
+  </div>
 </div>
+
