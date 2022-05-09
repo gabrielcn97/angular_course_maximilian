@@ -20,7 +20,7 @@
   </div>
 </div> -->
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <h1>Tarea No. 2 del Módulo 2</h1>
@@ -49,5 +49,37 @@
       <button type="button" class="btn btn-primary" [disabled]="username === ''" (click)="resetUsername($event)">Reset Username</button>
     </div>
   </div>
-</div>
+</div> -->
 
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Tarea No. 3 del Módulo 2</h1>
+      <ol>
+        <li>Agregue un botón que diga mostrar detalles</li>
+        <li>
+          Agregue un párrafo con cualquier contenido de su elección (por
+          ejemplo, "Secret password = tuna")
+        </li>
+        <li>
+          Alterne la visualización de ese párrafo con el botón creado en la
+          primera aplicación
+        </li>
+        <li>
+          Registre todos los clics del botón en una matriz y genere esa matriz
+          debajo del párrafo secreto (tal vez registre una marca de tiempo o
+          simplemente un número incrementado)
+        </li>
+        <li>
+          A partir del quinto elemento de registro, asigne a todos los elementos
+          de registro futuro un fondo azul (a través de ngStyle) y un color
+          blanco (ngClass)
+        </li>
+      </ol>
+      <hr />
+      <button type="button" class="btn btn-primary" (click)="passwordSee($event)">Display Details</button>
+      <p *ngIf="secretpassword">"Secret password = tuna"</p>
+      <div *ngFor="let logs of log" [ngStyle]="{backgroundColor: logs >=5 ? 'blue' : 'transparent'}" [ngClass]="{'number': logs >= 5}">{{logs}}</div>
+    </div>
+  </div>
+</div>

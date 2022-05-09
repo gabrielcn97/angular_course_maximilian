@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  username = '';
+  secretpassword = false;
+  log: number[] = [];
 
-  resetUsername(event: Event) {
-    this.username = '';
+  passwordSee(event : Event){
+    this.secretpassword = !this.secretpassword;
+    this.log.push(this.log.length + 1);
   }
-}
+
+  }
