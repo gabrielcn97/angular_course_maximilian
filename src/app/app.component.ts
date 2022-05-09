@@ -7,11 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   secretpassword = false;
-  log: number[] = [];
+  log: Date[] = [];
 
   passwordSee(event : Event){
     this.secretpassword = !this.secretpassword;
-    this.log.push(this.log.length + 1);
+    /* this.log.push(this.log.length + 1); */
+    //Utilizando Timestamp
+    this.log.push(new Date());
   }
 
   }
